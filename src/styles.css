@@ -1,4 +1,51 @@
-img{
+.banner{
     width: 100%;
-    height: 100%;
+    height: 90vh;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.img-contenido{
+    width: 100%;
+    height: 60vh;
+}
+.encabezado{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.certificado{
+    width: 70%;
+    height: 70%;
+}
+a{
+    text-decoration: none;
+}
+.logo-ws{
+    width:2rem;
+}
+.btn-contacto{
+    width: 200px;
+}
+.btn-contacto:hover{
+    transform: scale(1.05);
+}
+@media (max-width: 984px){
+.contenedor-btn{
+    flex-direction: column;
+    align-items: center;
+}
+.banner{
+    height: 60vh;
+}
+}
+@media (max-width: 780px){
+.banner{
+    height: 40vh;
+}
+    }
+.accordion-button:hover{
+    transform: scale(1.1);
+    background-color: #0275d8;
+    color: white;
 }
