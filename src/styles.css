@@ -53,8 +53,11 @@ a{
 @media (max-width: 420px){
     .p-home{
         margin: .5rem .2rem .5rem .3rem !important;
-        padding: .2rem !important;
+        padding: 1.4rem !important;
         font-size: .8rem !important;
+    }
+    .img-contenido{
+        height: 40vh;
     }
     .h1-home{
         padding: 0 !important;
@@ -68,4 +71,8 @@ a{
     transform: scale(1.1);
     background-color: #0275d8;
     color: white;
+}
+.menu-desplegable{
+    bottom: 100% !important;
+    width: auto!important;
 }

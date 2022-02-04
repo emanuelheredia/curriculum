@@ -8,7 +8,7 @@ function Habilidades(props) {
             <div className='text-center container mt-2 text-center p-5 animate__animated animate__bounceInLeft'>
                 <h1 className='p-4 text-primary'>Habilidades</h1>
                 <div className='shadow p-3 mb-5 bg-body rounded'>
-                    <h3 className='m-3 px-5'>DESARROLLO WEB</h3>
+                    <h3 className='m-3  text-center'>DESARROLLO WEB</h3>
                     <h4 className='text-secondary'>React JS</h4>
                     <h4 className='text-secondary'>Javascript</h4>
                     <h4 className='text-secondary'>CSS</h4>
