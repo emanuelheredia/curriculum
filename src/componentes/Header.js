@@ -6,7 +6,7 @@ function Header() {
         <div className='encabezado'>
             <nav className="navbar navbar-expand-lg navbar-light bg-primary">
                 <div className="container-fluid d-flex ">
-                    <NavLink className="navbar-brand text-light fs-2" to="/">EMANUEL <b>HEREDIA</b></NavLink>
+                    <NavLink className="navbar-brand text-light fs-2 nombre-encabezado" to="/">EMANUEL <b>HEREDIA</b></NavLink>
                     <div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
