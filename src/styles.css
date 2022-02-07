@@ -71,6 +71,9 @@ a{
     .banner{
         height: 30vh;
     }
+    .nombre-encabezado{
+    font-size: .9rem!important;
+    }
     }
 }
 .accordion-button:hover{
@@ -81,7 +84,4 @@ a{
 .menu-desplegable{
     bottom: 100% !important;
     width: auto!important;
-}
-.nombre-encabezado{
-font-size: .9rem!important;
 }
