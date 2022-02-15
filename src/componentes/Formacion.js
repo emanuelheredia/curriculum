@@ -22,7 +22,7 @@ function Formacion() {
                             <h5 className='m-4'>ESTADO</h5>
                             <h5 className='m-4 text-secondary'>Finalizado</h5>
                             <h5 className='m-4'>CERTIFICADO</h5>
-                            <img src={require("../assets/desarrollo-web.png")} alt='certificado' className='certificado'/>
+                            <img src={require("../assets/react.png")} alt='certificado' className='certificado'/>
                         </div>
                         </div>
                     </div>
