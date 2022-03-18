@@ -10,6 +10,7 @@ function Habilidades(props) {
                 <div className='shadow p-3 mb-5 bg-body rounded'>
                     <h3 className='m-3  text-center'>DESARROLLO WEB</h3>
                     <h4 className='text-secondary'>React JS</h4>
+                    <h4 className='text-secondary'>Redux</h4>
                     <h4 className='text-secondary'>Javascript</h4>
                     <h4 className='text-secondary'>CSS</h4>
                     <h4 className='text-secondary'>HTML</h4>
