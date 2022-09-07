@@ -1,20 +1,30 @@
-import React from "react";
-import Header from "./componentes/Header";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./componentes/Home";
-import SobreMi from "./componentes/SobreMi";
-import Formacion from "./componentes/Formacion";
-import Habilidades from "./componentes/Habilidades";
-import Contacto from "./componentes/Contacto";
-import Footer from "./componentes/Footer";
+import { useState, useEffect } from "react";
 import Cover from "./componentes/cover/Cover";
 import "./app.css";
+import Nadbar from "./componentes/nadbar/Nadbar";
+import About from "./componentes/about/About";
+import Slider from "./componentes/slider/Slider";
+import Info from "./componentes/info/Info";
+import Footer from "./componentes/footer/Footer";
 
 function App() {
+	const [scrollHeight, setScrollHeight] = useState(0);
+	const handleScroll = () => {
+		const position = window.pageYOffset;
+		setScrollHeight(position);
+	};
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+	}, [scrollHeight]);
 	return (
-		<>
+		<div className="App">
+			<Nadbar scrollHeight={scrollHeight} />
 			<Cover />
-		</>
+			<About />
+			<Slider />
+			<Info />
+			<Footer />
+		</div>
 	);
 }
 
