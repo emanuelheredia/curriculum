@@ -1,24 +1,49 @@
 import "./slider.css";
+import tiendaGuitar from "../../media/guitar-tienda.jpg";
+import controlGastos from "../../media/control-gastos.jpg";
+import crmClientes from "../../media/crm-clientes.jpg";
+import citasVeterinaria from "../../media/seguimiento-pacientes.jpg";
+import cryptoCoversor from "../../media/conversor-cypto.jpg";
+
+const goToURL = (url) => {};
+
 const slidesInfo = [
 	{
-		src: "https://d2fl3xywvvllvq.cloudfront.net/wp-content/uploads/2019/10/nutcache-image-2-600x360.jpg",
+		src: tiendaGuitar,
 		alt: "Proyecto 1",
-		desc: "Proyecto 1",
+		desc: "Tienda de Guitarras",
+		href: "https://github.com/emanuelheredia/tienda-Guitar",
 	},
 	{
-		src: "https://d2fl3xywvvllvq.cloudfront.net/wp-content/uploads/2019/10/nutcache-image-2-600x360.jpg",
+		src: crmClientes,
 		alt: "Proyecto 2",
-		desc: "Proyecto 2",
+		desc: "CRM Clintes",
+		href: "https://github.com/emanuelheredia/CRM-Clientes",
 	},
 	{
-		src: "https://d2fl3xywvvllvq.cloudfront.net/wp-content/uploads/2019/10/nutcache-image-2-600x360.jpg",
+		src: cryptoCoversor,
 		alt: "Proyecto 3",
-		desc: "Proyecto 3",
+		desc: "Conversor Crypto",
+		href: "https://github.com/emanuelheredia/cotizador-cryptomonedas",
+	},
+	{
+		src: citasVeterinaria,
+		alt: "Proyecto 4",
+		desc: "Seguimiento Pacientes",
+		href: "https://github.com/emanuelheredia/Citas-veterinaria",
+	},
+	{
+		src: controlGastos,
+		alt: "Proyecto 5",
+		desc: "Control Gastos",
+		href: "https://github.com/emanuelheredia/control-gastos",
 	},
 ];
 const slides = slidesInfo.map((slide) => (
 	<div className="slide-container">
-		<img src={slide.src} alt={slide.alt} />
+		<a href={slide.href} target="_blank">
+			<img src={slide.src} alt={slide.alt} />
+		</a>
 		<div className="slide-desc">
 			<span>{slide.desc}</span>
 		</div>
