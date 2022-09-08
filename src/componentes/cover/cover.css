@@ -23,7 +23,9 @@
     margin-top: 8px;
     color: whitesmoke;
     font-size: 32px;
+    position: relative;
 }
+
 @media only screen and (max-width:960px) {
     .cover-container h1{
         font-size: 70px;
