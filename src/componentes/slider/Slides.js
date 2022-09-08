@@ -29,7 +29,7 @@ const slidesInfo = [
 	{
 		src: citasVeterinaria,
 		alt: "Proyecto 4",
-		desc: "Seguimiento Pacientes",
+		desc: "Seguim. Pacientes",
 		href: "https://github.com/emanuelheredia/Citas-veterinaria",
 	},
 	{
