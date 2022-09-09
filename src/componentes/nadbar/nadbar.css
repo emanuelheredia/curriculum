@@ -7,6 +7,8 @@
     padding-left: 50px;
     font-size: 20px;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
 }
 .scrolling{
     background-color: black;
@@ -17,4 +19,23 @@
     line-height: 80px;
     color: whitesmoke;
     cursor: pointer;
+    font-size: 30px;
+}
+.list-container{
+    display: flex;
+    padding-right: 50px;
+
+}
+.list-container li{
+    padding: 20px 20px 0 20px;
+    list-style: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    margin: 0 10px 0 10px;
+
+}
+.list-container li:hover{
+    border-color: white;
+    transition: all 0.3s ease-out;
 }
