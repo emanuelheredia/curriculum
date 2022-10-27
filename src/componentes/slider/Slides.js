@@ -4,6 +4,7 @@ import controlGastos from "../../media/control-gastos.jpg";
 import crmClientes from "../../media/crm-clientes.jpg";
 import citasVeterinaria from "../../media/seguimiento-pacientes.jpg";
 import cryptoCoversor from "../../media/conversor-cypto.jpg";
+import crmRedux from "../../media/Redux.jpg";
 
 const goToURL = (url) => {};
 
@@ -27,14 +28,20 @@ const slidesInfo = [
 		href: "https://github.com/emanuelheredia/cotizador-cryptomonedas",
 	},
 	{
-		src: citasVeterinaria,
+		src: crmRedux,
 		alt: "Proyecto 4",
+		desc: "Listado Productos",
+		href: "https://github.com/emanuelheredia/CRUD---React-Redux-REST-API-Axios",
+	},
+	{
+		src: citasVeterinaria,
+		alt: "Proyecto 5",
 		desc: "Seguim. Pacientes",
 		href: "https://github.com/emanuelheredia/Citas-veterinaria",
 	},
 	{
 		src: controlGastos,
-		alt: "Proyecto 5",
+		alt: "Proyecto 6",
 		desc: "Control Gastos",
 		href: "https://github.com/emanuelheredia/control-gastos",
 	},

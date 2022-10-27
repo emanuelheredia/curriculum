@@ -11,7 +11,7 @@ const Slider = () => {
 				<h2>My Projects</h2>
 			</div>
 			<Carousel
-				plugins={["arrows", "infinite"]}
+				plugins={["arrows"]}
 				slidesPerPage={5}
 				animationSpeed={300}
 				offset={50}

@@ -5,7 +5,6 @@ const Nadbar = ({ scrollHeight }) => {
 	const toTheTop = () => {
 		window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 	};
-	console.log(tamañoPAantalla);
 	const toTheAbout = () => {
 		window.scrollTo({
 			top: tamañoPAantalla < 450 ? 750 : 800,

@@ -4,3 +4,41 @@
     box-sizing: border-box;
     font-family: "Roboto",sans-serif;
 }
+.spinner-container{
+    animation-name: desvaneserse;
+    background-color: black;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 3s;
+    z-index: 1;
+}
+.ocultar{
+    display: none;
+}
+@keyframes desvaneserse{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    80%{
+        opacity: .8;
+    }
+    90%{
+        opacity: .7;
+    }
+    100%{
+        opacity: 0;
+    }
+}
