@@ -11,6 +11,7 @@ import bootstrapIcon from "../../media/icons/bootstrap.png";
 import gitIcon from "../../media/icons/git.png";
 import gitHubIcon from "../../media/icons/github.png";
 import pythonIcon from "../../media/icons/python.png";
+import typescript from "../../media/icons/typescript.png";
 
 const icons = [
 	{
@@ -62,6 +63,11 @@ const icons = [
 		nombre: "MongoDB",
 		imagen: mongoIcon,
 		valoracion: 1.5,
+	},
+	{
+		nombre: "Typescript",
+		imagen: typescript,
+		valoracion: 4,
 	},
 ];
 

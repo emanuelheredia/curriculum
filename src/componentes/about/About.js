@@ -8,11 +8,10 @@ const About = () => {
 				<h3>Let me tell you about me</h3>
 				<p className="text-efecto-maquina-escribir">
 					I am a Frontend developer with a great passion for solving
-					problems using new technologies, and with great enthusiasm
-					for continuous learning. I would love to be part of a
-					company that allows me to work cooperatively with other
-					people and thus be able to learn and develop professionally
-					with them.
+					problems using new technologies and great enthusiasm for
+					continuous learning. I would love to be part of a company
+					that allows me to work cooperatively with other people and
+					thus be able to learn and develop professionally with them.
 					{/* Soy desarrollador Frontend con gran pasión por
 					resolver problemas utilizando nuevas tecnologías, y con gran
 					entusiasmo en aprender continuamente. Me encantaría formar

@@ -38,7 +38,7 @@ const Nadbar = ({ scrollHeight }) => {
 			<nav>
 				<ul className="list-container">
 					<li onClick={toTheAbout}>About Me</li>
-					<li onClick={toTheProyects}>My Proyects</li>
+					<li onClick={toTheProyects}>My Projects</li>
 					<li onClick={toTheAptitudes}>My Aptitudes</li>
 					<li onClick={toTheContact}>Contact Me</li>
 				</ul>
