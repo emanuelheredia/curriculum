@@ -5,10 +5,16 @@ import crmClientes from "../../media/crm-clientes.jpg";
 import citasVeterinaria from "../../media/seguimiento-pacientes.jpg";
 import cryptoCoversor from "../../media/conversor-cypto.jpg";
 import crmRedux from "../../media/Redux.jpg";
+import futbol from "../../media/viva-futbol.png";
 
 const goToURL = (url) => {};
 
-const slidesInfo = [
+const slidesInfo = [{
+		src: futbol,
+		alt: "Proyecto 0",
+		desc: "Prode futbol",
+		href: "https://github.com/emanuelheredia/viva-futbol",
+	},
 	{
 		src: tiendaGuitar,
 		alt: "Proyecto 1",
