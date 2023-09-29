@@ -8,6 +8,7 @@ import Info from "./componentes/info/Info";
 import Footer from "./componentes/footer/Footer";
 import Aptitudes from "./componentes/aptitudes/Aptitudes";
 import { SpinnerCircularSplit } from "spinners-react";
+import "./styles/styles.scss";
 
 function App() {
 	const [scrollHeight, setScrollHeight] = useState(0);

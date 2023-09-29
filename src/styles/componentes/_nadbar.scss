@@ -25,30 +25,28 @@
     display: flex;
     padding-right: 50px;
     align-items: center ;
-
-}
-.list-container li{
-    padding: 20px 20px 0 20px;
-    list-style: none;
-    color: white;
-    cursor: pointer;
-    border-bottom: 4px solid transparent;
-    margin: 0 10px 0 10px;
-
-}
-.list-container li:hover{
-    border-color: white;
-    transition: all 0.3s ease-out;
+    & li{
+        padding: 20px 20px 0 20px;
+        list-style: none;
+        color: white;
+        cursor: pointer;
+        border-bottom: 4px solid transparent;
+        margin: 0 10px 0 10px;
+        &:hover{
+            border-color: white;
+            transition: all 0.3s ease-out;
+        }
+    }
 }
 @media only screen and (max-width:880px) {
-    .list-container li{
-        padding: 10px 10px 0 10px;
-        font-size: 15px;
-        margin: 0;
-    }
-        .list-container{
+    .list-container{
         margin: 0;
         padding: 0 10px;
+        & li{
+            padding: 10px 10px 0 10px;
+            font-size: 15px;
+            margin: 0;
+        }
     }
     .nadbar-logo{
         font-size: 20px;

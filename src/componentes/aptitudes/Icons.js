@@ -1,6 +1,5 @@
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
-import "./icons.css";
 
 const Icons = ({ icon }) => {
 	return (

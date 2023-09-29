@@ -1,4 +1,3 @@
-import "./cover.css";
 import coverVideo from "../../media/coverVideo.mp4";
 
 import React from "react";

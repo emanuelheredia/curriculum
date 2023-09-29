@@ -14,10 +14,10 @@
     padding: 30px 0 30px 50px;
     width: 70%;
     margin: 0 auto;
-}
-.footer-info h1{
-    font-size: 55px;
-    padding-bottom: 15px;
+    & h1{
+        font-size: 55px;
+        padding-bottom: 15px;
+    }
 }
 .footer-contact{
     font-size: 22px;
@@ -47,12 +47,11 @@
     margin: 0 auto;
     padding-bottom: 10px;
     border-bottom: 4px solid transparent;
+    &:hover{
+        border-color: white;
+        transition: all 0.3s ease-out;
+    }
 }
-.likedin:hover, .github:hover, .whatsapp:hover {
-    border-color: white;
-    transition: all 0.3s ease-out;
-}
-
 .design-by{
     font-size: 18px;
     padding-left: 50px;

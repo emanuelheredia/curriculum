@@ -1,4 +1,3 @@
-import "./slider.css";
 import tiendaGuitar from "../../media/guitar-tienda.jpg";
 import controlGastos from "../../media/control-gastos.jpg";
 import crmClientes from "../../media/crm-clientes.jpg";
@@ -9,7 +8,8 @@ import futbol from "../../media/viva-futbol.png";
 
 const goToURL = (url) => {};
 
-const slidesInfo = [{
+const slidesInfo = [
+	{
 		src: futbol,
 		alt: "Proyecto 0",
 		desc: "Prode futbol",

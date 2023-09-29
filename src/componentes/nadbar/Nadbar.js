@@ -1,5 +1,3 @@
-import "./nadbar.css";
-
 const Nadbar = ({ scrollHeight }) => {
 	const tamañoPAantalla = window.screen.width;
 	const toTheTop = () => {

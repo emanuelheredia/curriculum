@@ -1,5 +1,4 @@
 import React from "react";
-import "./slider.css";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import Slides from "./Slides";

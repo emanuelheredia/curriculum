@@ -1,4 +1,3 @@
-import "./aptitudes.css";
 import React from "react";
 import Icons from "./Icons";
 import htmlIcon from "../../media/icons/html.png";
