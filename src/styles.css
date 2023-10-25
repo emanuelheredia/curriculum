@@ -33,6 +33,10 @@ a{
 .btn-contacto:hover{
     transform: scale(1.05);
 }
+p{
+            white-space: initial;
+
+}
 @media (max-width: 984px){
 .contenedor-btn{
     flex-direction: column;

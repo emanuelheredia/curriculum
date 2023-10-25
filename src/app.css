@@ -19,6 +19,9 @@
 .ocultar{
     display: none;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 @keyframes desvaneserse{
     0%{
         opacity: 1;

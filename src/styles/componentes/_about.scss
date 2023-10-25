@@ -1,50 +1,54 @@
 .about-container{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
     background-color: white;
     color: black;
     height: 70vh;
-    padding: 100px 0 100px 0;
+    padding: 0 3rem ;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 .about-desc{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 55%;
-    padding: 0 100px 0 100px;
+    color: $color-principal;
     & h3{
     margin-bottom: 30px;
-    font-size: 28px;
+    font-weight: bolder;
+    font-size: 2.5rem;
     }
     & p {
-        line-height: 1.5;
         display: inline;
     }
 }
-.about-img{
-    width: 45%;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    & img{
-        height: 100%;
-        width: 60%;
-        border-radius: 50%;
-    }
+.about-desc-imgDeco{
+    display: none;
 }
+@media only screen and (min-width:700px) {
+    .about-container{
+        min-height: calc(100vh - 100px);
+        margin: 0;
+        justify-content: space-evenly;
+    }
 
-@media only screen and (max-width:960px) {
+}
+@media only screen and (min-width:960px) {
     .about-container{
         flex-direction: column;
         padding: 0;
         height: auto;
     }
     .about-desc {
-        width: 90%;
         margin: 0 auto;
         padding: 40px 20px 50px 20px;
         & h3{
-            font-size: 20px;
-            text-align: center;
+            font-size: 3.5rem;
+        }
+        & p{
+            font-size: 1.5rem;
         }
     }
     .about-img{
@@ -53,5 +57,39 @@
         & img{
             width: 50%;
         }
+    }
+}
+@media only screen and (min-width:1400px) {
+    .about-container{
+    flex-direction: column;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    height: auto;
+}
+    .about-desc {
+        width: 60%;
+        padding: 0;
+        & p{
+            font-size: 1.5rem;
+            width: 100%;
+        }
+    }
+    .about-desc-container{
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .imageAbout-container{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-desc-imgDeco{
+        width: 250px;
+        filter: invert(18%) sepia(59%) saturate(4508%) hue-rotate(246deg) brightness(92%) contrast(101%);
+        display: block;
     }
 }
