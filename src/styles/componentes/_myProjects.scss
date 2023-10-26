@@ -4,8 +4,8 @@
     vertical-align: center;
     align-items: center;
     background-color: $color-secundario;
-    height: 100vh;
-    padding: 5rem 3rem 0 3rem;
+    height: auto;
+    padding: 5rem 3rem 1rem 3rem;
     position: relative;
 }
 
@@ -56,8 +56,10 @@
     }
 }
 @media only screen and (min-width:700px) {
-
-
+.projects-container{
+    height: 100vh;
+    overflow: scroll;
+}
 }
 @media only screen and (min-width:960px) {
     .projects-title{

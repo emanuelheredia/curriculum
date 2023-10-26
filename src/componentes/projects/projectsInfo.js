@@ -53,6 +53,22 @@ const projectsInfo = [
 		detalles:
 			"Viva Futbol es un apasionante proyecto que combina la emoción del fútbol con la tecnología, permitiéndote pronosticar los resultados de la Liga Profesional del Fútbol Argentino y otras ligas destacadas de todo el mundo. Regístrate con tu correo y contraseña, completa tu perfil con tus datos personales y equipo favorito, luego predice los resultados de los partidos antes de cada fecha. Consulta tu puntaje y posición en la tabla de clasificación al final de cada jornada, todo respaldado por una seguridad sólida en Firebase. Desarrollado con tecnología de vanguardia, este proyecto en constante crecimiento te ofrece una experiencia única para los amantes del fútbol y la tecnología.",
 	},
+	{
+		projectName: "Viva Futbol",
+		images: [
+			imgVivaFutbol1,
+			imgVivaFutbol2,
+			imgVivaFutbol3,
+			imgVivaFutbol4,
+			imgVivaFutbol5,
+			imgVivaFutbol6,
+		],
+		hrefGitHub: "https://github.com/emanuelheredia/viva-futbol",
+		hrefApp: "",
+		tecnologies: "REACT JS - REDUX - FIREBASE ",
+		detalles:
+			"Viva Futbol es un apasionante proyecto que combina la emoción del fútbol con la tecnología, permitiéndote pronosticar los resultados de la Liga Profesional del Fútbol Argentino y otras ligas destacadas de todo el mundo. Regístrate con tu correo y contraseña, completa tu perfil con tus datos personales y equipo favorito, luego predice los resultados de los partidos antes de cada fecha. Consulta tu puntaje y posición en la tabla de clasificación al final de cada jornada, todo respaldado por una seguridad sólida en Firebase. Desarrollado con tecnología de vanguardia, este proyecto en constante crecimiento te ofrece una experiencia única para los amantes del fútbol y la tecnología.",
+	},
 	/* 
 	{
 		src: tiendaGuitar,
