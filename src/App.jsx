@@ -13,16 +13,16 @@ import BlogPostCardSlider from "./componentes/sliderPage/BlogPostCardSlider";
 import BlogPostCard from "./componentes/sliderPage/BlogPostCard";
 
 const App = () => {
-	const [scrollHeight, setScrollHeight] = useState(0);
 	const [width, setWidth] = useState(window.screen.width);
 	useEffect(() => {
 		window.addEventListener("resize", (e) =>
 			setWidth(e.currentTarget.innerWidth),
 		);
 	}, []);
+
 	return (
 		<div className="App">
-			<Nadbar scrollHeight={scrollHeight} />
+			<Nadbar />
 			{width > 700 ? (
 				<BlogPostCardSlider>
 					<Portada />

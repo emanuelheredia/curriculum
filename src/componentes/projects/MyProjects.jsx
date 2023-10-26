@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import projectsInfo from "./projectsInfo";
 import "react-awesome-slider/dist/styles.css";
 import ProjectCard from "./ProjectCard";
@@ -6,11 +6,12 @@ import ProjectCard from "./ProjectCard";
 const MyProjects = ({ width }) => {
 	const [zoomIsOpen, setZoomIsOpen] = React.useState(false);
 	const [imageZoom, setImageZoom] = useState(null);
+	const [scrollHeight, setScrollHeight] = useState(0);
 	const [projectImagesToZoom, setProjectImagesToZoom] = useState(null);
 	const [heightToImageZoom, setHeightToImageZoom] = useState("auto");
 	useEffect(() => {
 		if (width < 700) {
-			setHeightToImageZoom("60%");
+			setHeightToImageZoom("600px");
 		}
 		if (width > 700 && width < 1200) {
 			setHeightToImageZoom("70%");
@@ -22,6 +23,7 @@ const MyProjects = ({ width }) => {
 			setHeightToImageZoom("100%");
 		}
 	}, [width]);
+	console.log(scrollHeight);
 	return (
 		<div className="projects-container">
 			<div className="projects-title">
@@ -35,6 +37,7 @@ const MyProjects = ({ width }) => {
 							setImageZoom={setImageZoom}
 							project={project}
 							setProjectImagesToZoom={setProjectImagesToZoom}
+							setScrollHeight={setScrollHeight}
 						/>
 					</div>
 				))}
@@ -57,7 +60,10 @@ const MyProjects = ({ width }) => {
 			{zoomIsOpen && (
 				<div
 					className="imageZoom-container"
-					style={{ height: heightToImageZoom }}
+					style={{
+						height: heightToImageZoom,
+						top: scrollHeight - 250,
+					}}
 				>
 					<img src={projectImagesToZoom[imageZoom]} alt="imageZoom" />
 					<p

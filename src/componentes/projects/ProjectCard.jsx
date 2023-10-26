@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import Modal from "react-modal";
 const customStyles = {
@@ -23,7 +23,10 @@ const ProjectCard = ({
 	setImageZoom,
 	setZoomIsOpen,
 	setProjectImagesToZoom,
+	setScrollHeight,
 }) => {
+	const cardRef = useRef(null);
+
 	const [modal1IsOpen, setIs1Open] = React.useState(false);
 
 	function openModal1() {
@@ -32,9 +35,11 @@ const ProjectCard = ({
 	function closeModal1() {
 		setIs1Open(false);
 	}
-
+	const handleHeigthElement = () => {
+		setScrollHeight(cardRef.current.getBoundingClientRect().top);
+	};
 	return (
-		<div className="proyectCard-container">
+		<div className="proyectCard-container" ref={cardRef}>
 			<h4 className="projectCard-title">{project.projectName}</h4>
 			<div className="projectCard-sliderContainer">
 				<AwesomeSlider>
@@ -45,6 +50,7 @@ const ProjectCard = ({
 								setImageZoom(index);
 								setProjectImagesToZoom(project.images);
 								setZoomIsOpen(true);
+								handleHeigthElement();
 							}}
 						>
 							<img
@@ -69,14 +75,14 @@ const ProjectCard = ({
 						rel="noreferrer"
 					>
 						<i
-							class="fa fa-link link-projectCard"
+							className="fa fa-link link-projectCard"
 							aria-hidden="true"
 						></i>
 					</a>
 				)}
 				<a rel="noreferrer">
 					<i
-						class="fa fa-info-circle info-projectCard"
+						className="fa fa-info-circle info-projectCard"
 						aria-hidden="true"
 						onClick={openModal1}
 					></i>
