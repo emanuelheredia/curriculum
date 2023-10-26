@@ -16,26 +16,15 @@ const customStyles = {
 		backgroundColor: "rgba(0, 0, 0, 0.900)",
 	},
 };
-const customStyles2 = {
-	content: {
-		top: "20%",
-		left: "50%",
-		right: "auto",
-		bottom: "auto",
-		marginRight: "-50%",
-		transform: "translate(-50%, -50%)",
-		width: "350px",
-		height: "350px",
-		display: "flex",
-		flexDirection: "column",
-		backgroundColor: "rgba(0, 0, 0, 0.900)",
-	},
-};
+
 Modal.setAppElement("*");
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({
+	project,
+	setImageZoom,
+	setZoomIsOpen,
+	setProjectImagesToZoom,
+}) => {
 	const [modal1IsOpen, setIs1Open] = React.useState(false);
-	const [modal2IsOpen, setIs2Open] = React.useState(false);
-	const [imageZoom, setImageZoom] = useState(null);
 
 	function openModal1() {
 		setIs1Open(true);
@@ -43,12 +32,7 @@ const ProjectCard = ({ project }) => {
 	function closeModal1() {
 		setIs1Open(false);
 	}
-	function openModal2() {
-		setIs2Open(true);
-	}
-	function closeModal2() {
-		setIs2Open(false);
-	}
+
 	return (
 		<div className="proyectCard-container">
 			<h4 className="projectCard-title">{project.projectName}</h4>
@@ -59,7 +43,8 @@ const ProjectCard = ({ project }) => {
 							key={index}
 							onClick={() => {
 								setImageZoom(index);
-								openModal2();
+								setProjectImagesToZoom(project.images);
+								setZoomIsOpen(true);
 							}}
 						>
 							<img
@@ -70,48 +55,25 @@ const ProjectCard = ({ project }) => {
 						</div>
 					))}
 				</AwesomeSlider>
-				{/* 				<img
-					className="projectCard-imageContainer"
-					src={project.images[2]}
-				/>
- */}{" "}
 			</div>
-			<Modal
-				isOpen={modal2IsOpen}
-				onRequestClose={closeModal2}
-				style={customStyles2}
-				contentLabel="Example Modal"
-			>
-				<button className="btn-closeModal" onClick={closeModal2}>
-					X
-				</button>
-				<div className="productModal-text-container">
-					<img
-						className="productModal-imageZoom"
-						src={project.images[imageZoom]}
-					/>
-				</div>
-			</Modal>
 
 			<div className="projectCard-linksContainer">
 				{" "}
-				<a
-					target="_blank"
-					href={"https://github.com/emanuelheredia/power-tracker"}
-					rel="noreferrer"
-				>
+				<a target="_blank" href={project.hrefGitHub} rel="noreferrer">
 					<i className="fa-brands fa-github github-projectCard"></i>
 				</a>
-				<a
-					target="_blank"
-					href={"https://power-tracker.vercel.app/"}
-					rel="noreferrer"
-				>
-					<i
-						class="fa fa-link link-projectCard"
-						aria-hidden="true"
-					></i>
-				</a>
+				{project.hrefApp && (
+					<a
+						target="_blank"
+						href={"https://power-tracker.vercel.app/"}
+						rel="noreferrer"
+					>
+						<i
+							class="fa fa-link link-projectCard"
+							aria-hidden="true"
+						></i>
+					</a>
+				)}
 				<a rel="noreferrer">
 					<i
 						class="fa fa-info-circle info-projectCard"

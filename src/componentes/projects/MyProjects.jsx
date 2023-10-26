@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import projectsInfo from "./projectsInfo";
 import "react-awesome-slider/dist/styles.css";
 import ProjectCard from "./ProjectCard";
 
-const MyProjects = () => {
+const MyProjects = ({ width }) => {
+	const [zoomIsOpen, setZoomIsOpen] = React.useState(false);
+	const [imageZoom, setImageZoom] = useState(null);
+	const [projectImagesToZoom, setProjectImagesToZoom] = useState(null);
+	const [heightToImageZoom, setHeightToImageZoom] = useState("auto");
+	useEffect(() => {
+		if (width < 700) {
+			setHeightToImageZoom("60%");
+		}
+		if (width > 700 && width < 1200) {
+			setHeightToImageZoom("70%");
+		}
+		if (width > 1200 && width < 1500) {
+			setHeightToImageZoom("90%");
+		}
+		if (width > 1500) {
+			setHeightToImageZoom("100%");
+		}
+	}, [width]);
 	return (
 		<div className="projects-container">
 			<div className="projects-title">
@@ -12,7 +30,12 @@ const MyProjects = () => {
 			<div className="cardProjects-container">
 				{projectsInfo.map((project, index) => (
 					<div key={index} className="cardContainer">
-						<ProjectCard project={project} />
+						<ProjectCard
+							setZoomIsOpen={setZoomIsOpen}
+							setImageZoom={setImageZoom}
+							project={project}
+							setProjectImagesToZoom={setProjectImagesToZoom}
+						/>
 					</div>
 				))}
 			</div>
@@ -31,6 +54,20 @@ const MyProjects = () => {
 				}}
 			/>
  */}{" "}
+			{zoomIsOpen && (
+				<div
+					className="imageZoom-container"
+					style={{ height: heightToImageZoom }}
+				>
+					<img src={projectImagesToZoom[imageZoom]} alt="imageZoom" />
+					<p
+						className="btn-closeZoomImage"
+						onClick={() => setZoomIsOpen(false)}
+					>
+						X
+					</p>
+				</div>
+			)}
 		</div>
 	);
 };

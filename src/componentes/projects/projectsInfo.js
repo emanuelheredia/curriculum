@@ -12,6 +12,12 @@ import imgPowerTrack4 from "../../assets/projectsImages/power-track/image-4.png"
 import imgPowerTrack5 from "../../assets/projectsImages/power-track/image-5.png";
 import imgPowerTrack6 from "../../assets/projectsImages/power-track/image-6.png";
 import imgPowerTrack7 from "../../assets/projectsImages/power-track/image-7.png";
+import imgVivaFutbol1 from "../../assets/projectsImages/viva+futbol/prode.png";
+import imgVivaFutbol2 from "../../assets/projectsImages/viva+futbol/resultadosPorPartido.png";
+import imgVivaFutbol3 from "../../assets/projectsImages/viva+futbol/matchsDay.png";
+import imgVivaFutbol4 from "../../assets/projectsImages/viva+futbol/posiciones.png";
+import imgVivaFutbol5 from "../../assets/projectsImages/viva+futbol/login.png";
+import imgVivaFutbol6 from "../../assets/projectsImages/viva+futbol/alertLogin.png";
 
 const projectsInfo = [
 	{
@@ -25,20 +31,29 @@ const projectsInfo = [
 			imgPowerTrack6,
 			imgPowerTrack7,
 		],
-		imagesDirectoryName: "power-track",
-		hrefGitHub: "",
-		hrefApp: "",
+		hrefGitHub: "https://github.com/emanuelheredia/power-tracker",
+		hrefApp: "https://power-tracker.vercel.app/",
 		tecnologies: "REACT JS - REDUX - NODE JS - MONGODB - FIREBASE - ",
 		detalles:
 			"Power Track App es una solución integral para la gestión de precios y productos en el negocio de accesorios vehiculares. Permite a los clientes cargar archivos Excel de proveedores, extrayendo eficientemente los datos a Firebase Firestore mediante Node.js y MongoDB. La aplicación presenta listas de precios detalladas con información, imágenes y precios actualizados, respaldados por MongoDB. Los visitantes pueden filtrar productos de manera rápida y sólida por categoría, color, código o vehículo gracias a Node.js y MongoDB. Además, los administradores pueden gestionar listas de precios y modificar fotos de productos a través de MongoDB, ofreciendo una administración completa. La aplicación está desplegada en Vercel (Front) y Render (Servidor) con una conexión a la nube de MongoDB y es plenamente funcional para el cliente.",
 	},
-	/* 
 	{
-		src: futbol,
-		alt: "Proyecto 0",
-		desc: "Prode futbol",
-		href: "https://github.com/emanuelheredia/viva-futbol",
+		projectName: "Viva Futbol",
+		images: [
+			imgVivaFutbol1,
+			imgVivaFutbol2,
+			imgVivaFutbol3,
+			imgVivaFutbol4,
+			imgVivaFutbol5,
+			imgVivaFutbol6,
+		],
+		hrefGitHub: "https://github.com/emanuelheredia/viva-futbol",
+		hrefApp: "",
+		tecnologies: "REACT JS - REDUX - FIREBASE ",
+		detalles:
+			"Viva Futbol es un apasionante proyecto que combina la emoción del fútbol con la tecnología, permitiéndote pronosticar los resultados de la Liga Profesional del Fútbol Argentino y otras ligas destacadas de todo el mundo. Regístrate con tu correo y contraseña, completa tu perfil con tus datos personales y equipo favorito, luego predice los resultados de los partidos antes de cada fecha. Consulta tu puntaje y posición en la tabla de clasificación al final de cada jornada, todo respaldado por una seguridad sólida en Firebase. Desarrollado con tecnología de vanguardia, este proyecto en constante crecimiento te ofrece una experiencia única para los amantes del fútbol y la tecnología.",
 	},
+	/* 
 	{
 		src: tiendaGuitar,
 		alt: "Proyecto 1",

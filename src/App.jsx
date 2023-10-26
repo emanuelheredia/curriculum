@@ -27,7 +27,7 @@ const App = () => {
 				<BlogPostCardSlider>
 					<Portada />
 					<About />
-					<MyProjects />
+					<MyProjects width={width} />
 					<Footer />
 				</BlogPostCardSlider>
 			) : (
@@ -35,7 +35,7 @@ const App = () => {
 					{" "}
 					<Portada />
 					<About />
-					<MyProjects />
+					<MyProjects width={width} />
 					<Footer />
 				</div>
 			)}
