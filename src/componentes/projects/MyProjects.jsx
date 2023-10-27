@@ -35,7 +35,7 @@ const MyProjects = ({ width }) => {
 	}
 	useEffect(() => {
 		if (width < 700) {
-			customStyles.content.height = "500px";
+			customStyles.content.height = "400px";
 		}
 		if (width > 700 && width < 1200) {
 			customStyles.content.height = "70%";

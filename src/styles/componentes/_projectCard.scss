@@ -1,7 +1,7 @@
 .proyectCard-container{
-    height: 470px;
-    max-width: 90vw;
-    padding: 1rem 2rem;
+    height: 270px;
+    width: 240px;
+    padding: .5rem 2rem;
     border-radius: 10px;
     background-color: $color-principal-trans;
     box-shadow: 8px 5px 5px black;
@@ -11,17 +11,19 @@
     text-align: center;
     font-weight: bolder;
     color: $color-secundario;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 .awssld__wrapper{
-    width: 330px;
-    height: 300px;
+    width: 180px;
+    height: 150px;
     border-radius: 20px;
     z-index: 1;
 }
 .awssld__bullets{
     & button{
         background-color: $color-secundario;
+        width: .5rem;
+        height: .5rem;
     }
 }
 .awssld__bullets--active{
@@ -34,17 +36,18 @@
     width: 600px;
     margin: 1rem 0 0rem 0;
     gap: 1rem;
+    cursor: pointer;
 }
 .projectCard-linksContainer{
-    margin-top: 3.7rem;
+    margin-top: 3rem;
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     justify-content: center;
 }
 
 .github-projectCard,.link-projectCard,.info-projectCard{
     color: $color-secundario;
-    font-size: 35px;
+    font-size: 25px;
     margin: 0 auto;
     padding-bottom: 10px;
     border-bottom: 4px solid transparent;
@@ -79,4 +82,48 @@
 .productModal-imageZoom{
     width: 100%;
     height: 300px;
+}
+@media only screen and (min-width:700px) {
+    .proyectCard-container{
+        height: 270px;
+        width: 280px;
+    }
+    .awssld__wrapper{
+        width: 220px;
+        height: 150px;
+}
+}
+@media only screen and (min-width:1200px) {
+    .proyectCard-container{
+        height: 350px;
+        width: 350px;
+    }
+    .awssld__wrapper{
+        width: 290px;
+        height: 220px;
+}
+}
+@media only screen and (min-width:1600px) {
+    .proyectCard-container{
+        height: 400px;
+        width: 400px;
+    }
+    .awssld__wrapper{
+        width: 340px;
+        height: 270px;
+}
+.awssld__bullets{
+    & button{
+        background-color: $color-secundario;
+        width: .8rem;
+        height: .8rem;
+    }
+}
+.github-projectCard,.link-projectCard,.info-projectCard{
+    font-size: 30px;
+    &:hover{
+        transform: scale(1.1);
+        transition: all 0.3s ease-out;
+    }
+}
 }
