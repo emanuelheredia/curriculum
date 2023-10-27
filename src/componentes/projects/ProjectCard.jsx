@@ -9,8 +9,8 @@ const customStyles = {
 		bottom: "auto",
 		marginRight: "-50%",
 		transform: "translate(-50%, -50%)",
-		width: "350px",
-		height: "350px",
+		width: "80%",
+		height: "400px",
 		display: "flex",
 		flexDirection: "column",
 		backgroundColor: "rgba(0, 0, 0, 0.900)",
@@ -21,9 +21,8 @@ Modal.setAppElement("*");
 const ProjectCard = ({
 	project,
 	setImageZoom,
-	setZoomIsOpen,
+	openModal2,
 	setProjectImagesToZoom,
-	setScrollHeight,
 }) => {
 	const cardRef = useRef(null);
 
@@ -35,9 +34,7 @@ const ProjectCard = ({
 	function closeModal1() {
 		setIs1Open(false);
 	}
-	const handleHeigthElement = () => {
-		setScrollHeight(cardRef.current.getBoundingClientRect().top);
-	};
+
 	return (
 		<div className="proyectCard-container" ref={cardRef}>
 			<h4 className="projectCard-title">{project.projectName}</h4>
@@ -49,8 +46,7 @@ const ProjectCard = ({
 							onClick={() => {
 								setImageZoom(index);
 								setProjectImagesToZoom(project.images);
-								setZoomIsOpen(true);
-								handleHeigthElement();
+								openModal2();
 							}}
 						>
 							<img
