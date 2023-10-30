@@ -14,24 +14,40 @@ import BlogPostCard from "./componentes/sliderPage/BlogPostCard";
 
 const App = () => {
 	const [width, setWidth] = useState(window.screen.width);
+	const [scrollHeight, setScrollHeight] = useState(0);
+	const [visibleSlide, setVisibleSlide] = useState(0);
+
 	useEffect(() => {
 		window.addEventListener("resize", (e) =>
 			setWidth(e.currentTarget.innerWidth),
 		);
 	}, []);
-
+	const handleScroll = () => {
+		const position = window.pageYOffset;
+		setScrollHeight(position);
+	};
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+	}, [scrollHeight]);
 	return (
 		<div className="App">
-			<Nadbar />
+			<Nadbar
+				scrollHeight={scrollHeight}
+				setVisibleSlide={setVisibleSlide}
+				visibleSlide={visibleSlide}
+			/>
 			{width > 700 ? (
-				<BlogPostCardSlider>
+				<BlogPostCardSlider
+					setVisibleSlide={setVisibleSlide}
+					visibleSlide={visibleSlide}
+				>
 					<Portada />
 					<About />
 					<MyProjects width={width} />
 					<Footer />
 				</BlogPostCardSlider>
 			) : (
-				<div style={{ marginTop: "100px" }}>
+				<div style={{ marginTop: "60px" }}>
 					{" "}
 					<Portada />
 					<About />

@@ -6,8 +6,7 @@ import SlideLink from "./SlideLink";
 import Wrapper from "./Wrapper";
 import Slide from "./Slide";
 
-const BlogPostCardSlider = ({ children }) => {
-	const [visibleSlide, setVisibleSlide] = useState(0);
+const BlogPostCardSlider = ({ children, visibleSlide, setVisibleSlide }) => {
 	const [targetSlide, setTargetSlide] = useState(0);
 	const wrapperRef = useRef(null);
 	const targetSlideRef = useRef(null);
@@ -44,11 +43,12 @@ const BlogPostCardSlider = ({ children }) => {
 		setVisibleSlide(Math.round(scrollTop / height));
 		touchScroll();
 	}, [touchScroll]);
-
 	useEffect(scrollToTargetSlide, [targetSlide]);
-
+	useEffect(() => {
+		setTargetSlide(visibleSlide);
+	}, []);
 	return (
-		<div id="trap" style={{ marginTop: "100px" }} tabIndex="0">
+		<div id="trap" className="blogPostCard-container" tabIndex="0">
 			{/* 			<button onClick={() => setTargetSlide(moveLeft)}>PREV</button>
 
 			{children.map((_, i) => {

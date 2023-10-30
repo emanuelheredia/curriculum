@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { CgMenuGridR } from "react-icons/cg";
 
-const Nadbar = ({ scrollHeight }) => {
+const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 	const [showMenu, setSetshowMenu] = useState(false);
 	const [width, setWidth] = useState(window.innerWidth);
+	const [customStyle, setCustomStyle] = useState({});
+	const [listStyle, setListStyle] = useState({});
 	const tamañoPAantalla = window.screen.width;
 	useEffect(() => {
 		window.addEventListener("resize", (e) => setWidth(e.target.innerWidth));
@@ -14,36 +16,58 @@ const Nadbar = ({ scrollHeight }) => {
 	const toTheTop = () => {
 		window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 	};
+	const toPortada = () => {
+		if (width > 700) setVisibleSlide(0);
+		else
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: "smooth",
+			});
+	};
 	const toTheAbout = () => {
-		window.scrollTo({
-			top: tamañoPAantalla < 450 ? 750 : 800,
-			left: 0,
-			behavior: "smooth",
-		});
+		if (width > 700) {
+			setVisibleSlide(1);
+		} else
+			window.scrollTo({
+				top: tamañoPAantalla < 450 ? 750 : 620,
+				left: 0,
+				behavior: "smooth",
+			});
 	};
 	const toTheProyects = () => {
-		window.scrollTo({
-			top: tamañoPAantalla < 450 ? 1300 : 1500,
-			left: 0,
-			behavior: "smooth",
-		});
-	};
-	const toTheAptitudes = () => {
-		window.scrollTo({
-			top: tamañoPAantalla < 450 ? 1800 : 2350,
-			left: 0,
-			behavior: "smooth",
-		});
+		if (width > 700) setVisibleSlide(2);
+		else
+			window.scrollTo({
+				top: tamañoPAantalla < 450 ? 1450 : 1300,
+				left: 0,
+				behavior: "smooth",
+			});
 	};
 	const toTheContact = () => {
-		window.scrollTo({ top: 3500, left: 0, behavior: "smooth" });
+		if (width > 700) setVisibleSlide(3);
+		else window.scrollTo({ top: 3500, left: 0, behavior: "smooth" });
 	};
+	useEffect(() => {
+		if (width < 780) {
+			setCustomStyle({ backgroundColor: "#4831d4" });
+		} else if (width > 780 && visibleSlide === 0) {
+			setCustomStyle({
+				background: "linear-gradient(90deg, #4831d4 67%,  #ccf381 33%)",
+			});
+			setListStyle({});
+		} else if (width > 780 && visibleSlide !== 0) {
+			setCustomStyle({ backgroundColor: "#4831d4" });
+			setListStyle({ color: "#ccf381" });
+		}
+	}, [scrollHeight, visibleSlide, width]);
+
 	return (
-		<div className={`nadbar scrolling`}>
-			{/* 		</div><div className={`nadbar ${scrollHeight > 20 && "scrolling"}`}>
-			 */}
+		<div className={`nadbar`} style={customStyle}>
 			<div className="nadbar-logoContainer" onClick={toTheTop}>
-				<p className="nadbar-logo">E H</p>
+				<p onClick={toPortada} className="nadbar-logo">
+					E H
+				</p>
 				{width > 780 && (
 					<div className="completeName-container">
 						<p className="nadbar-completeName">
@@ -60,10 +84,15 @@ const Nadbar = ({ scrollHeight }) => {
 				<ul
 					className={`list-container ${showMenu ? "showList" : null}`}
 				>
-					<li onClick={toTheAbout}>About Me</li>
-					<li onClick={toTheProyects}>My Projects</li>
-					<li onClick={toTheAptitudes}>My Aptitudes</li>
-					<li onClick={toTheContact}>Contact Me</li>
+					<li style={listStyle} onClick={toTheAbout}>
+						About Me
+					</li>
+					<li style={listStyle} onClick={toTheProyects}>
+						My Projects
+					</li>
+					<li style={listStyle} onClick={toTheContact}>
+						Contact Me
+					</li>
 				</ul>
 			</nav>
 		</div>
