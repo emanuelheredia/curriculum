@@ -65,11 +65,7 @@ const ProjectCard = ({
 					<i className="fa-brands fa-github github-projectCard"></i>
 				</a>
 				{project.hrefApp && (
-					<a
-						target="_blank"
-						href={"https://power-tracker.vercel.app/"}
-						rel="noreferrer"
-					>
+					<a target="_blank" href={project.hrefApp} rel="noreferrer">
 						<i
 							className="fa fa-link link-projectCard"
 							aria-hidden="true"

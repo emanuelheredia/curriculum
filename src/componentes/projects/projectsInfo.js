@@ -18,6 +18,11 @@ import imgVivaFutbol3 from "../../assets/projectsImages/viva+futbol/matchsDay.pn
 import imgVivaFutbol4 from "../../assets/projectsImages/viva+futbol/posiciones.png";
 import imgVivaFutbol5 from "../../assets/projectsImages/viva+futbol/login.png";
 import imgVivaFutbol6 from "../../assets/projectsImages/viva+futbol/alertLogin.png";
+import imgUptask1 from "../../assets/projectsImages/up-task/image-1.png";
+import imgUptask2 from "../../assets/projectsImages/up-task/Captura desde 2023-10-30 22-51-09.png";
+import imgUptask3 from "../../assets/projectsImages/up-task/Captura desde 2023-10-30 22-51-18.png";
+import imgUptask4 from "../../assets/projectsImages/up-task/Captura desde 2023-10-30 22-51-40.png";
+import imgUptask5 from "../../assets/projectsImages/up-task/Captura desde 2023-10-30 22-52-00.png";
 
 const projectsInfo = [
 	{
@@ -54,20 +59,13 @@ const projectsInfo = [
 			"Viva Futbol es un apasionante proyecto que combina la emoción del fútbol con la tecnología, permitiéndote pronosticar los resultados de la Liga Profesional del Fútbol Argentino y otras ligas destacadas de todo el mundo. Regístrate con tu correo y contraseña, completa tu perfil con tus datos personales y equipo favorito, luego predice los resultados de los partidos antes de cada fecha. Consulta tu puntaje y posición en la tabla de clasificación al final de cada jornada, todo respaldado por una seguridad sólida en Firebase. Desarrollado con tecnología de vanguardia, este proyecto en constante crecimiento te ofrece una experiencia única para los amantes del fútbol y la tecnología.",
 	},
 	{
-		projectName: "Viva Futbol",
-		images: [
-			imgVivaFutbol1,
-			imgVivaFutbol2,
-			imgVivaFutbol3,
-			imgVivaFutbol4,
-			imgVivaFutbol5,
-			imgVivaFutbol6,
-		],
-		hrefGitHub: "https://github.com/emanuelheredia/viva-futbol",
-		hrefApp: "",
-		tecnologies: "REACT JS - REDUX - FIREBASE ",
+		projectName: "Up Task",
+		images: [imgUptask1, imgUptask2, imgUptask3, imgUptask4, imgUptask5],
+		hrefGitHub: "https://github.com/emanuelheredia/front_upTask_MERN",
+		hrefApp: "https://front-up-task-mern.vercel.app/",
+		tecnologies: "REACT JS - REDUX - MONGODB - NODEJS",
 		detalles:
-			"Viva Futbol es un apasionante proyecto que combina la emoción del fútbol con la tecnología, permitiéndote pronosticar los resultados de la Liga Profesional del Fútbol Argentino y otras ligas destacadas de todo el mundo. Regístrate con tu correo y contraseña, completa tu perfil con tus datos personales y equipo favorito, luego predice los resultados de los partidos antes de cada fecha. Consulta tu puntaje y posición en la tabla de clasificación al final de cada jornada, todo respaldado por una seguridad sólida en Firebase. Desarrollado con tecnología de vanguardia, este proyecto en constante crecimiento te ofrece una experiencia única para los amantes del fútbol y la tecnología.",
+			"Aplicación web creada con MongoDB, React JS, Express JS y Node JS. La misma es una UpTask para la gestión de proyectos, seguimiento de errores e incidencias dirigida a una empresa IT. La misma permite el registro de usuarios con validación y confirmación por email . La aplicación permite crear proyectos con asignación de tareas , definición de fecha de entregas, prioridades y la asignacion de colaboradores al proyecto. Las modificaciones tienen actualización instantánea mediante la utilización de socket io en tiempo real. Otras tecnologías utilizadas son : TailwindCSS, Mongoose,SocketIO,MaterialIU.Compruebe esta versión beta con los siguientes permisos: usuario : ema_359@hotmail.com - password: pass123. Todos los formularios poseen validaciones.",
 	},
 	/* 
 	{
