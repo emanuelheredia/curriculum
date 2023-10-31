@@ -3,7 +3,7 @@
     background-color: $color-principal;
     color: $color-secundario;
     display: flex;
-    height: 300px;
+    height: 240px;
     flex-direction: column;
     justify-content: center;
     align-items: start;
@@ -30,7 +30,7 @@
 }
 .portada-imageContainer{
     background-color: $color-secundario;
-    padding: 2rem 3.2rem 2rem 3rem;
+    padding: 4rem 3.2rem 4rem 3rem;
     display: flex;
     justify-content: center;
     & img{
@@ -43,6 +43,7 @@
 @media (min-width:"600px") {
     .portada-container{
         min-width: 100vw;
+        height: 70vh;
         background: linear-gradient(90deg, #4831d4 67%,  #ccf381 33%);
         display: grid;
         grid-template-areas: 
