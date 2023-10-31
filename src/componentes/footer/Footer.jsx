@@ -9,7 +9,7 @@ const Footer = () => {
 			</div>
 			<div className="footer-divisorLine"></div>
 			<div className="footer-contact">
-				<h3>Contáctactame</h3>
+				<h3>Contactame</h3>
 				<p>Y creemos algo único</p>
 			</div>
 			<div className="footer-sns">
