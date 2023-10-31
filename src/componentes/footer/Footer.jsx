@@ -9,11 +9,11 @@ const Footer = () => {
 			</div>
 			<div className="footer-divisorLine"></div>
 			<div className="footer-contact">
-				<h3>Contact me</h3>
-				<p>And let's get down to work</p>
+				<h3>Contáctactame</h3>
+				<p>Y creemos algo único</p>
 			</div>
 			<div className="footer-sns">
-				<div className="design-by">Design By Emanuel Heredia</div>
+				<div className="design-by">Diseñado por Emanuel Heredia</div>
 				<div className="sns-links">
 					<a
 						href={
