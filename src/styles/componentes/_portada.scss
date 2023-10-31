@@ -3,6 +3,7 @@
     background-color: $color-principal;
     color: $color-secundario;
     display: flex;
+    height: 350px;
     flex-direction: column;
     justify-content: center;
     align-items: start;
@@ -52,6 +53,7 @@
     }
     .portada-mainText{
         grid-area: mainText;
+        height: auto;
     }
     .portada-secondaryText{
         grid-area: secondaryText;
