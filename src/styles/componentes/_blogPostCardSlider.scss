@@ -1,3 +1,43 @@
+.blogPostCard-sliderLinks-container{
+    position: fixed ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 40vh;
+    right: 0;
+    z-index: 1000;
+}
+.arrowSliderBtn{
+    border: none;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    :hover {
+        transform: scale(1.2);
+    }
+}
+.sc-bdnyFh{
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+}
+.iotiqI{
+    border: solid 1px $color-secundario;
+    background-color: $color-principal !important;
+}
+.kfFxTB{
+        border: solid 1px $color-principal;
+    background-color: $color-secundario !important;
+}
 @media (min-width:"700px"){
 .blogPostCard-container{
     margin-top:60px ;

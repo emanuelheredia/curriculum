@@ -1,7 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-
 import useIdle from "../customHooks/useIdle";
-
 import SlideLink from "./SlideLink";
 import Wrapper from "./Wrapper";
 import Slide from "./Slide";
@@ -49,21 +47,19 @@ const BlogPostCardSlider = ({ children, visibleSlide, setVisibleSlide }) => {
 	}, []);
 	return (
 		<div id="trap" className="blogPostCard-container" tabIndex="0">
-			{/* 			<button onClick={() => setTargetSlide(moveLeft)}>PREV</button>
-
-			{children.map((_, i) => {
-				return (
-					<SlideLink
-						key={`slideLink-${i}`}
-						isActive={visibleSlide === i}
-						onClick={() => setTargetSlide(i)}
-					>
-						{i + 1}
-					</SlideLink>
-				);
-			})}
-			<button onClick={() => setTargetSlide(moveRight)}>NEXT</button> */}
-
+			<div className="blogPostCard-sliderLinks-container">
+				{children.map((_, i) => {
+					return (
+						<SlideLink
+							key={`slideLink-${i}`}
+							isActive={visibleSlide === i}
+							onClick={() => setTargetSlide(i)}
+						>
+							{i + 1}
+						</SlideLink>
+					);
+				})}
+			</div>
 			<Wrapper onScroll={handleScroll} ref={wrapperRef}>
 				{children.map((child, i) => (
 					<Slide
