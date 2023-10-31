@@ -3,6 +3,7 @@ import projectsInfo from "./projectsInfo";
 import "react-awesome-slider/dist/styles.css";
 import ProjectCard from "./ProjectCard";
 import Modal from "react-modal";
+import { Carousal } from "react-3d-carousal";
 
 const customStyles = {
 	content: {
@@ -23,7 +24,7 @@ Modal.setAppElement("*");
 const MyProjects = ({ width }) => {
 	const [modal2IsOpen, setIs2Open] = React.useState(false);
 	const [imageZoom, setImageZoom] = useState(null);
-	const [heightToImageZoom, setHeightToImageZoom] = useState("600px");
+	const [aligCarousel, setAligCarousel] = useState("17%");
 	const [scrollHeight, setScrollHeight] = useState(0);
 	const [projectImagesToZoom, setProjectImagesToZoom] = useState("");
 
@@ -34,17 +35,26 @@ const MyProjects = ({ width }) => {
 		setIs2Open(false);
 	}
 	useEffect(() => {
+		if (width < 550) {
+			setAligCarousel("16%");
+		}
+		if (width > 550 && width < 700) {
+			setAligCarousel("23%");
+		}
 		if (width < 700) {
 			customStyles.content.height = "400px";
 		}
 		if (width > 700 && width < 1200) {
+			setAligCarousel("20%");
 			customStyles.content.height = "70%";
 		}
 		if (width > 1200 && width < 1500) {
 			customStyles.content.height = "90%";
+			setAligCarousel("37%");
 		}
 		if (width > 1500) {
 			customStyles.content.height = "95%";
+			setAligCarousel("37%");
 		}
 	}, [width]);
 	return (
@@ -52,18 +62,23 @@ const MyProjects = ({ width }) => {
 			<div className="projects-title">
 				<h2>My Projects</h2>
 			</div>
-			<div className="cardProjects-container">
-				{projectsInfo.map((project, index) => (
-					<div key={index} className="cardContainer">
-						<ProjectCard
-							openModal2={openModal2}
-							setImageZoom={setImageZoom}
-							project={project}
-							setProjectImagesToZoom={setProjectImagesToZoom}
-							setScrollHeight={setScrollHeight}
-						/>
-					</div>
-				))}
+			<div
+				style={{ left: aligCarousel }}
+				className="cardProjects-container"
+			>
+				<Carousal
+					slides={projectsInfo.map((project, index) => (
+						<div key={index} className="cardContainer">
+							<ProjectCard
+								openModal2={openModal2}
+								setImageZoom={setImageZoom}
+								project={project}
+								setProjectImagesToZoom={setProjectImagesToZoom}
+								setScrollHeight={setScrollHeight}
+							/>
+						</div>
+					))}
+				/>
 			</div>
 			{/* 			<Carousel
 				plugins={["arrows"]}

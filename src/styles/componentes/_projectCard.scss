@@ -1,6 +1,6 @@
 .proyectCard-container{
-    height: 270px;
-    width: 240px;
+    height: 400px;
+    width: 300px;
     padding: .5rem 2rem;
     border-radius: 10px;
     background-color: $color-principal-trans;
@@ -14,8 +14,8 @@
     font-size: 1.2rem;
 }
 .awssld__wrapper{
-    width: 180px;
-    height: 150px;
+    width: 240px;
+    height: 230px;
     border-radius: 20px;
     z-index: 1;
 }
@@ -85,32 +85,13 @@
 }
 @media only screen and (min-width:700px) {
     .proyectCard-container{
-        height: 270px;
-        width: 280px;
+        height: 500px;
+        width: 450px;
     }
     .awssld__wrapper{
-        width: 220px;
-        height: 150px;
-}
-}
-@media only screen and (min-width:1200px) {
-    .proyectCard-container{
+        width: 385px;
         height: 350px;
-        width: 350px;
-    }
-    .awssld__wrapper{
-        width: 290px;
-        height: 220px;
 }
-}
-@media only screen and (min-width:1600px) {
-    .proyectCard-container{
-        height: 400px;
-        width: 400px;
-    }
-    .awssld__wrapper{
-        width: 340px;
-        height: 270px;
 }
 .awssld__bullets{
     & button{
@@ -125,5 +106,4 @@
         transform: scale(1.1);
         transition: all 0.3s ease-out;
     }
-}
 }

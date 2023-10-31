@@ -27,14 +27,6 @@ const BlogPostCardSlider = ({ children, visibleSlide, setVisibleSlide }) => {
 	}, [visibleSlide, scrollToTargetSlide]);
 	const touchScroll = useIdle({ timeout: 40, onIdle: finishScrolling });
 
-	const moveLeft = useCallback(
-		(targetSlide) => Math.max(0, targetSlide - 1),
-		[],
-	);
-	const moveRight = useCallback(
-		(targetSlide) => Math.min(targetSlide + 1, children.length - 1),
-		[children],
-	);
 	const handleScroll = useCallback(() => {
 		let { height } = wrapperRef.current.getBoundingClientRect();
 		let { scrollTop } = wrapperRef.current;
