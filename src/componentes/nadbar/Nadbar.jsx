@@ -69,7 +69,7 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 					E H
 				</p>
 				{width > 780 && (
-					<div className="completeName-container">
+					<div onClick={toPortada} className="completeName-container">
 						<p className="nadbar-completeName">
 							Emanuel Heredia<span>&#160;</span>
 						</p>
