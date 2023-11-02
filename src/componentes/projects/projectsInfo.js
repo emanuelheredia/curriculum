@@ -136,18 +136,7 @@ const projectsInfo = [
 		desc: "Listado Productos",
 		href: "https://github.com/emanuelheredia/CRUD---React-Redux-REST-API-Axios",
 	},
-	{
-		src: citasVeterinaria,
-		alt: "Proyecto 5",
-		desc: "Seguim. Pacientes",
-		href: "https://github.com/emanuelheredia/Citas-veterinaria",
-	},
-	{
-		src: controlGastos,
-		alt: "Proyecto 6",
-		desc: "Control Gastos",
-		href: "https://github.com/emanuelheredia/control-gastos",
-	}, */
+*/
 ];
 
 export default projectsInfo;
