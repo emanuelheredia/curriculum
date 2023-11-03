@@ -36,7 +36,6 @@
     min-width: 350px;
     margin: 1rem 0 0rem 0;
     gap: 1rem;
-    cursor: pointer;
 }
 .projectCard-linksContainer{
     margin-top: 3rem;
@@ -83,6 +82,18 @@
     width: 100%;
     height: 300px;
 }
+.maximizeIcon{
+    position: absolute;
+    font-size: 2.5rem;
+    top: 41%;
+    color: $color-principal;
+    left: 42%;
+    z-index: 2000;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
 @media only screen and (min-width:700px) {
     .proyectCard-container{
         height: 500px;
@@ -95,6 +106,11 @@
 .projectCard-imageContainer{
     height: 370px;
     min-width: 480px;
+}
+.maximizeIcon{
+    font-size: 2.7rem;
+    top: 46%;
+    left: 45%;
 }
 }
 .awssld__bullets{

@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import Modal from "react-modal";
+import { FiMaximize } from "react-icons/fi";
 const customStyles = {
 	content: {
 		top: "50%",
@@ -41,18 +42,19 @@ const ProjectCard = ({
 			<div className="projectCard-sliderContainer">
 				<AwesomeSlider>
 					{project.images.map((image, index) => (
-						<div
-							key={index}
-							onClick={() => {
-								setImageZoom(index);
-								setProjectImagesToZoom(project.images);
-								openModal2();
-							}}
-						>
+						<div key={index}>
 							<img
 								src={image}
 								alt=""
 								className="projectCard-imageContainer"
+							/>
+							<FiMaximize
+								onClick={() => {
+									setImageZoom(index);
+									setProjectImagesToZoom(project.images);
+									openModal2();
+								}}
+								className="maximizeIcon"
 							/>
 						</div>
 					))}
