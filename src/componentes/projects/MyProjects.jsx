@@ -42,7 +42,7 @@ const MyProjects = ({ width }) => {
 			setAligCarousel("23%");
 		}
 		if (width < 700) {
-			customStyles.content.height = "400px";
+			customStyles.content.height = "350px";
 		}
 		if (width > 700 && width < 1200) {
 			setAligCarousel("20%");
