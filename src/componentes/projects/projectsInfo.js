@@ -28,10 +28,9 @@ import imgControlGastos3 from "../../assets/projectsImages/control-gastos/Captur
 import imgControlGastos4 from "../../assets/projectsImages/control-gastos/Captura desde 2023-11-02 13-49-35.png";
 import imgControlGastos5 from "../../assets/projectsImages/control-gastos/Captura desde 2023-11-02 13-49-42.png";
 import imgCitasVeterinaria1 from "../../assets/projectsImages/citas-veterinaria/citas-veterinaria.gif";
-import imgCitasVeterinaria2 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-01 21-32-02.png";
-import imgCitasVeterinaria3 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-34-24.png";
-import imgCitasVeterinaria4 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-35-09.png";
-import imgCitasVeterinaria5 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-35-18.png";
+import imgCitasVeterinaria2 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-34-24.png";
+import imgCitasVeterinaria3 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-35-09.png";
+import imgCitasVeterinaria4 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-35-18.png";
 
 const projectsInfo = [
 	{
@@ -114,7 +113,6 @@ const projectsInfo = [
 			imgCitasVeterinaria2,
 			imgCitasVeterinaria3,
 			imgCitasVeterinaria4,
-			imgCitasVeterinaria5,
 		],
 		hrefGitHub: "https://github.com/emanuelheredia/Citas-veterinaria",
 		hrefApp: "https://citas-veterinaria-kappa.vercel.app/",
