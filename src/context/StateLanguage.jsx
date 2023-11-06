@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { languageContext } from "./languageContext";
 const StateLanguage = ({ children }) => {
-	const [languajeSelected, setLanguajeSelected] = useState("esp");
+	const [languajeSelected, setLanguajeSelected] = useState("eng");
 
 	return (
 		<languageContext.Provider

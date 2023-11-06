@@ -11,7 +11,7 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const [customStyle, setCustomStyle] = useState({});
 	const [listStyle, setListStyle] = useState({});
-	const [changeLanguage, setChangeLanguage] = useState("esp");
+	const [changeLanguage, setChangeLanguage] = useState("eng");
 	const tamañoPAantalla = window.screen.width;
 	useEffect(() => {
 		window.addEventListener("resize", (e) => setWidth(e.target.innerWidth));
