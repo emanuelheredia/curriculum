@@ -1,9 +1,11 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import projectsInfo from "./projectsInfo";
 import "react-awesome-slider/dist/styles.css";
 import ProjectCard from "./ProjectCard";
 import Modal from "react-modal";
 import { Carousal } from "react-3d-carousal";
+import { languageContext } from "../../context/languageContext";
+import { dictionary } from "../helpers/languageDict";
 
 const customStyles = {
 	content: {
@@ -27,6 +29,8 @@ const MyProjects = ({ width }) => {
 	const [aligCarousel, setAligCarousel] = useState("17%");
 	const [scrollHeight, setScrollHeight] = useState(0);
 	const [projectImagesToZoom, setProjectImagesToZoom] = useState("");
+	const { languajeSelected } = useContext(languageContext);
+	const { myProjects } = dictionary;
 
 	function openModal2() {
 		setIs2Open(true);
@@ -60,7 +64,7 @@ const MyProjects = ({ width }) => {
 	return (
 		<div className="projects-container">
 			<div className="projects-title">
-				<h2>My Projects</h2>
+				<h2>{myProjects[languajeSelected]}</h2>
 			</div>
 			<div
 				style={{ left: aligCarousel }}
@@ -80,21 +84,6 @@ const MyProjects = ({ width }) => {
 					))}
 				/>
 			</div>
-			{/* 			<Carousel
-				plugins={["arrows"]}
-				slidesPerPage={5}
-				animationSpeed={300}
-				offset={50}
-				itemWidth={400}
-				slides={Slides}
-				breakpoints={{
-					960: {
-						slidesPerPage: 1,
-						itemWidth: 250,
-					},
-				}}
-			/>
- */}{" "}
 			<Modal
 				isOpen={modal2IsOpen}
 				onRequestClose={closeModal2}

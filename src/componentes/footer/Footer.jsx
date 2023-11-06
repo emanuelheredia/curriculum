@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { languageContext } from "../../context/languageContext";
+import { dictionary } from "../helpers/languageDict";
 
 const Footer = () => {
+	const { leyends, design } = dictionary.contactMe;
+	const { languajeSelected } = useContext(languageContext);
+
 	return (
 		<footer className="footer">
 			<div className="footer-info">
@@ -9,11 +14,11 @@ const Footer = () => {
 			</div>
 			<div className="footer-divisorLine"></div>
 			<div className="footer-contact">
-				<h3>Contactame</h3>
-				<p>Y creemos algo único</p>
+				<h3>{leyends[0][languajeSelected]}</h3>
+				<p>{leyends[1][languajeSelected]}</p>
 			</div>
 			<div className="footer-sns">
-				<div className="design-by">Diseñado por Emanuel Heredia</div>
+				<div className="design-by">{design[languajeSelected]}</div>
 				<div className="sns-links">
 					<a
 						href={

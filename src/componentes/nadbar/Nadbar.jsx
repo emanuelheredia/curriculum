@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { CgMenuGridR } from "react-icons/cg";
-
+import { languageContext } from "../../context/languageContext";
+import Switch from "react-input-switch";
+import { dictionary } from "../helpers/languageDict";
 const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
+	const { about, proyects, contactme } = dictionary.nadbar;
+	const { languajeSelected, setLanguajeSelected } =
+		useContext(languageContext);
 	const [showMenu, setSetshowMenu] = useState(false);
 	const [width, setWidth] = useState(window.innerWidth);
 	const [customStyle, setCustomStyle] = useState({});
 	const [listStyle, setListStyle] = useState({});
+	const [changeLanguage, setChangeLanguage] = useState("esp");
 	const tamañoPAantalla = window.screen.width;
 	useEffect(() => {
 		window.addEventListener("resize", (e) => setWidth(e.target.innerWidth));
@@ -61,7 +67,9 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 			setListStyle({ color: "#ccf381" });
 		}
 	}, [scrollHeight, visibleSlide, width]);
-
+	useEffect(() => {
+		setLanguajeSelected(changeLanguage);
+	}, [changeLanguage]);
 	return (
 		<div className={`nadbar`} style={customStyle}>
 			<div className="nadbar-logoContainer" onClick={toTheTop}>
@@ -75,6 +83,41 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 						</p>
 					</div>
 				)}
+				<div className="switch-container">
+					<p
+						className="nadbar-switchLeyend"
+						onClick={() => setChangeLanguage("esp")}
+					>
+						ESP
+					</p>
+					<Switch
+						on="eng"
+						off="esp"
+						value={changeLanguage}
+						onChange={setChangeLanguage}
+						className="nadbar-switch"
+						styles={{
+							track: {
+								backgroundColor: "#ccf381",
+							},
+							trackChecked: {
+								backgroundColor: "#ccf381",
+							},
+							button: {
+								backgroundColor: "#4831d4",
+							},
+							buttonChecked: {
+								backgroundColor: "#4831d4",
+							},
+						}}
+					/>
+					<p
+						className="nadbar-switchLeyend"
+						onClick={() => setChangeLanguage("eng")}
+					>
+						ENG
+					</p>
+				</div>
 			</div>
 			<nav className="nadbar-navegationContainer">
 				<CgMenuGridR
@@ -85,13 +128,13 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 					className={`list-container ${showMenu ? "showList" : null}`}
 				>
 					<li style={listStyle} onClick={toTheAbout}>
-						About Me
+						{about[languajeSelected]}
 					</li>
 					<li style={listStyle} onClick={toTheProyects}>
-						My Projects
+						{proyects[languajeSelected]}
 					</li>
 					<li style={listStyle} onClick={toTheContact}>
-						Contact Me
+						{contactme[languajeSelected]}
 					</li>
 				</ul>
 			</nav>

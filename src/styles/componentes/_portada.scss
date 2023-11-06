@@ -80,11 +80,17 @@
     .portada-container{
         min-height: calc(100vh - 100px);
         max-height: 100vh;
+        & h1{
+            white-space:normal ;
+        }
     }
 }
 @media (min-width:"800px") {
     .portada-mainText{
         padding-right: 0;
+        & h1{
+            font-size: 3rem;
+        }
     }
     .portada-secondaryText{
         padding-right:6rem;

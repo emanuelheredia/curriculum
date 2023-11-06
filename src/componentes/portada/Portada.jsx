@@ -1,27 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import miFoto from "../../assets/myImageMobile2.png";
 import miFoto2 from "../../assets/myImageSinfondo.png";
+import { languageContext } from "../../context/languageContext";
+import { dictionary } from "../helpers/languageDict";
 
 const Portada = () => {
+	const { languajeSelected } = useContext(languageContext);
+	const { title, subtitle, paragraph } = dictionary.portada;
 	return (
 		<div className="portada-container">
 			<div className="portada-mainText">
-				<h1>Frontend Developer.</h1>
-				<p className="portada-subTitle">
-					Me gusta crear productos frontend sólidos y escalables con
-					excelentes experiencias de usuario.
-				</p>
+				<h1>{title[languajeSelected]}</h1>
+				<p className="portada-subTitle">{subtitle[languajeSelected]}</p>
 			</div>
 			<div className="portada-secondaryText">
-				<p>
-					Comprometido con la excelencia y mejora progresiva en
-					sistemas de diseño e ingeniería UI
-				</p>
-				<p>
-					Creo soluciones innovadoras y funcionales, listo para
-					aportar experiencia a proyectos desafiantes y de gran
-					impacto.
-				</p>
+				<p>{paragraph[0][languajeSelected]}</p>
+				<p>{paragraph[1][languajeSelected]}</p>
 			</div>
 			<div className="portada-imageContainer">
 				<img
