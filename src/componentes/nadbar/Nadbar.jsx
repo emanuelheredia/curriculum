@@ -9,8 +9,8 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 		useContext(languageContext);
 	const [showMenu, setSetshowMenu] = useState(false);
 	const [width, setWidth] = useState(window.innerWidth);
-	const [customStyle, setCustomStyle] = useState({});
-	const [listStyle, setListStyle] = useState({});
+	const [screeSize, setScreeSize] = useState("mobile");
+	const [listStyle, setListStyle] = useState("");
 	const [changeLanguage, setChangeLanguage] = useState("eng");
 	const tamañoPAantalla = window.screen.width;
 	useEffect(() => {
@@ -56,22 +56,21 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 	};
 	useEffect(() => {
 		if (width < 780) {
-			setCustomStyle({ backgroundColor: "#4831d4" });
+			setScreeSize("mobile");
 		} else if (width > 780 && visibleSlide === 0) {
-			setCustomStyle({
-				background: "linear-gradient(90deg, #4831d4 67%,  #ccf381 33%)",
-			});
-			setListStyle({});
+			setScreeSize("medium");
+			setListStyle("");
 		} else if (width > 780 && visibleSlide !== 0) {
-			setCustomStyle({ backgroundColor: "#4831d4" });
-			setListStyle({ color: "#ccf381" });
+			setScreeSize("large");
+			setListStyle("secundaryColor");
 		}
 	}, [scrollHeight, visibleSlide, width]);
 	useEffect(() => {
 		setLanguajeSelected(changeLanguage);
 	}, [changeLanguage]);
+	console.log(listStyle);
 	return (
-		<div className={`nadbar`} style={customStyle}>
+		<div className={`nadbar ${screeSize}`}>
 			<div className="nadbar-logoContainer" onClick={toTheTop}>
 				<p onClick={toPortada} className="nadbar-logo">
 					E H
@@ -127,13 +126,13 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 				<ul
 					className={`list-container ${showMenu ? "showList" : null}`}
 				>
-					<li style={listStyle} onClick={toTheAbout}>
+					<li className={listStyle} onClick={toTheAbout}>
 						{about[languajeSelected]}
 					</li>
-					<li style={listStyle} onClick={toTheProyects}>
+					<li className={listStyle} onClick={toTheProyects}>
 						{proyects[languajeSelected]}
 					</li>
-					<li style={listStyle} onClick={toTheContact}>
+					<li className={listStyle} onClick={toTheContact}>
 						{contactme[languajeSelected]}
 					</li>
 				</ul>

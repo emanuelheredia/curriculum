@@ -11,6 +11,18 @@
     z-index: 2;
     background-color:$color-principal;
 }
+.mobile{
+    background-color: $color-principal
+}
+.medium{
+    background: linear-gradient(90deg, $color-principal 67%,  $color-secundario 33%);
+}
+.large{
+     background-color: $color-principal
+}
+.secundaryColor{
+    color: $color-secundario !important;
+}
 .nadbar-logoContainer{
     display: flex;
     position: relative;

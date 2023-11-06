@@ -44,7 +44,7 @@
     .portada-container{
         min-width: 100vw;
         height: 70vh;
-        background: linear-gradient(90deg, #4831d4 67%,  #ccf381 33%);
+        background: linear-gradient(90deg, $color-principal 67%,  $color-secundario 33%);
         display: grid;
         grid-template-areas: 
         "mainText imagePortada imagePortada"
