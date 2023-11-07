@@ -63,9 +63,7 @@
         }
     }
 }
-.black-backGround{
-    background-color:#4731d4cb !important;
-}
+
 .showList{
     display: flex;
 }
@@ -82,6 +80,13 @@
     font-size: 18px;
     color: $color-secundario;
 }
+.css-1v96km2-Switch,.css-19a995p-Switch{
+    background-color: $color-principal !important;
+}
+.css-jfsaru-Switch,.css-153wf2s-Switch{
+    background-color: $color-secundario !important;
+}
+
 @media (min-width:"780px"){
     .nadbar{
         height: 100px;

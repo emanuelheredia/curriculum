@@ -87,7 +87,7 @@
     }
     .about-desc-imgDeco{
         width: 250px;
-        filter: invert(18%) sepia(59%) saturate(4508%) hue-rotate(246deg) brightness(92%) contrast(101%);
+        filter: $color-princial-filter-image;
         display: block;
     }
 }

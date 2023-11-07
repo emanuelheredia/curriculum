@@ -95,20 +95,6 @@ const Nadbar = ({ scrollHeight, visibleSlide, setVisibleSlide }) => {
 						value={changeLanguage}
 						onChange={setChangeLanguage}
 						className="nadbar-switch"
-						styles={{
-							track: {
-								backgroundColor: "#ccf381",
-							},
-							trackChecked: {
-								backgroundColor: "#ccf381",
-							},
-							button: {
-								backgroundColor: "#4831d4",
-							},
-							buttonChecked: {
-								backgroundColor: "#4831d4",
-							},
-						}}
 					/>
 					<p
 						className="nadbar-switchLeyend"

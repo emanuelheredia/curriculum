@@ -1,4 +1,5 @@
 
-$color-principal: #4831d4;
-$color-principal-trans: #4731d4d5;
-$color-secundario: #ccf381
+$color-principal: #4731d4;
+$color-principal-trans: $color-principal+e7;
+$color-secundario: #ccf381;
+$color-princial-filter-image: invert(18%) sepia(59%) saturate(4508%) hue-rotate(246deg) brightness(92%) contrast(101%) //   CSS filter generator https://codepen.io/sosuke/pen/Pjoqqp
