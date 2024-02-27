@@ -97,7 +97,7 @@
 }
 .myProyects_cardProjectContainer{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
@@ -137,12 +137,12 @@
 }
 @media only screen and (min-width:1200px) {
     .proyectCard-container {
-        height: 380px;
+        height: 360px;
         width: 350px;
     }
     .awssld__wrapper {
         width: 290px;
-        height: 250px;
+        height: 230px;
     }
 
     .projectCard-imageContainer {
