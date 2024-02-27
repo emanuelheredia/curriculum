@@ -4,7 +4,7 @@
     vertical-align: center;
     align-items: center;
     background-color: $color-secundario;
-    height: 700px;
+    height: 650px;
     padding: 3rem 3rem 1rem 3rem;
     position: relative;
 }
@@ -31,6 +31,7 @@
     & img{
         width: 100%;
         height: 100%;
+        object-fit: contain;
     }
 }
 .btn-closeZoomImage{

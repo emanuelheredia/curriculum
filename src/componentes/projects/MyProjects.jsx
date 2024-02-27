@@ -27,7 +27,7 @@ const MyProjects = ({ width }) => {
 	const [modal2IsOpen, setIs2Open] = React.useState(false);
 	const [imageZoom, setImageZoom] = useState(null);
 	const [aligCarousel, setAligCarousel] = useState("17%");
-	const [scrollHeight, setScrollHeight] = useState(0);
+	const [setScrollHeight] = useState(0);
 	const [projectImagesToZoom, setProjectImagesToZoom] = useState("");
 	const { languajeSelected } = useContext(languageContext);
 	const { myProjects } = dictionary;
@@ -66,12 +66,32 @@ const MyProjects = ({ width }) => {
 			<div className="projects-title">
 				<h2>{myProjects[languajeSelected]}</h2>
 			</div>
-			<div
-				style={{ left: aligCarousel }}
-				className="cardProjects-container"
-			>
-				<Carousal
-					slides={projectsInfo.map((project, index) => (
+			{width < 1200 && (
+				<div
+					style={{ left: aligCarousel }}
+					className="cardProjects-container"
+				>
+					<Carousal
+						offsetRadius={4}
+						slides={projectsInfo.map((project, index) => (
+							<div key={index} className="cardContainer">
+								<ProjectCard
+									openModal2={openModal2}
+									setImageZoom={setImageZoom}
+									project={project}
+									setProjectImagesToZoom={
+										setProjectImagesToZoom
+									}
+									setScrollHeight={setScrollHeight}
+								/>
+							</div>
+						))}
+					/>
+				</div>
+			)}
+			{width > 1200 && (
+				<div className="myProyects_cardProjectContainer">
+					{projectsInfo.map((project, index) => (
 						<div key={index} className="cardContainer">
 							<ProjectCard
 								openModal2={openModal2}
@@ -82,8 +102,8 @@ const MyProjects = ({ width }) => {
 							/>
 						</div>
 					))}
-				/>
-			</div>
+				</div>
+			)}
 			<Modal
 				isOpen={modal2IsOpen}
 				onRequestClose={closeModal2}

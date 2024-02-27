@@ -1,5 +1,5 @@
 .proyectCard-container{
-    height: 400px;
+    height: 360px;
     width: 300px;
     padding: .5rem 2rem;
     border-radius: 10px;
@@ -36,6 +36,7 @@
     min-width: 350px;
     margin: 1rem 0 0rem 0;
     gap: 1rem;
+    object-fit: fill;
 }
 .projectCard-linksContainer{
     margin-top: 3rem;
@@ -94,6 +95,13 @@
         transform: scale(1.2);
     }
 }
+.myProyects_cardProjectContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
 @media only screen and (min-width:700px) {
     .proyectCard-container{
         height: 500px;
@@ -123,6 +131,46 @@
 .github-projectCard,.link-projectCard,.info-projectCard{
     font-size: 30px;
     &:hover{
+        transform: scale(1.1);
+        transition: all 0.3s ease-out;
+    }
+}
+@media only screen and (min-width:1200px) {
+    .proyectCard-container {
+        height: 380px;
+        width: 350px;
+    }
+    .awssld__wrapper {
+        width: 290px;
+        height: 250px;
+    }
+
+    .projectCard-imageContainer {
+        height: 370px;
+        min-width: 480px;
+    }
+
+    .maximizeIcon {
+        font-size: 2.7rem;
+        top: 46%;
+        left: 45%;
+    }
+}
+
+.awssld__bullets {
+    & button {
+        background-color: $color-secundario;
+        width: .8rem;
+        height: .8rem;
+    }
+}
+
+.github-projectCard,
+.link-projectCard,
+.info-projectCard {
+    font-size: 30px;
+
+    &:hover {
         transform: scale(1.1);
         transition: all 0.3s ease-out;
     }

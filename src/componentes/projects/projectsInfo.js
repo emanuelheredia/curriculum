@@ -31,6 +31,13 @@ import imgCitasVeterinaria1 from "../../assets/projectsImages/citas-veterinaria/
 import imgCitasVeterinaria2 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-34-24.png";
 import imgCitasVeterinaria3 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-35-09.png";
 import imgCitasVeterinaria4 from "../../assets/projectsImages/citas-veterinaria/Captura desde 2023-11-02 14-35-18.png";
+import imgAgenda1 from "../../assets/projectsImages/agenda/Captura desde 2024-02-26 14-45-13.png";
+import imgAgenda2 from "../../assets/projectsImages/agenda/Captura desde 2024-02-26 14-45-30.png";
+import imgAgenda3 from "../../assets/projectsImages/agenda/Captura desde 2024-02-26 14-45-41.png";
+import imgAgenda4 from "../../assets/projectsImages/agenda/Captura desde 2024-02-26 14-45-54.png";
+import imgAgenda5 from "../../assets/projectsImages/agenda/Captura desde 2024-02-26 14-46-04.png";
+import imgAgenda6 from "../../assets/projectsImages/agenda/Captura desde 2024-02-26 14-46-10.png";
+import imgAgenda7 from "../../assets/projectsImages/agenda/Captura desde 2024-02-26 14-46-23.png";
 
 const projectsInfo = [
 	{
@@ -49,6 +56,23 @@ const projectsInfo = [
 		tecnologies: "REACT JS - REDUX - NODE JS - MONGODB - FIREBASE - ",
 		detalles:
 			"Power Track App es una solución integral para la gestión de precios y productos en el negocio de accesorios vehiculares. Permite a los clientes cargar archivos Excel de proveedores, extrayendo eficientemente los datos a Firebase Firestore mediante Node.js y MongoDB. La aplicación presenta listas de precios detalladas con información, imágenes y precios actualizados, respaldados por MongoDB. Los visitantes pueden filtrar productos de manera rápida y sólida por categoría, color, código o vehículo gracias a Node.js y MongoDB. Además, los administradores pueden gestionar listas de precios y modificar fotos de productos a través de MongoDB, ofreciendo una administración completa. La aplicación está desplegada en Vercel (Front) y Render (Servidor) con una conexión a la nube de MongoDB y es plenamente funcional para el cliente.",
+	},
+	{
+		projectName: "Agenda Boot",
+		images: [
+			imgAgenda1,
+			imgAgenda2,
+			imgAgenda3,
+			imgAgenda4,
+			imgAgenda5,
+			imgAgenda6,
+			imgAgenda7,
+		],
+		hrefGitHub: "https://github.com/emanuelheredia/front-psico_calendar",
+		hrefApp: "https://mi-agenda.vercel.app/login",
+		tecnologies: "REACT JS - NODEJS - MONGODB - WHATSAPPWEB-JS - NODE-CRON",
+		detalles:
+			"La aplicación desarrollada combina tecnologías como React, Node.js, MongoDB y WhatsAppWeb-JS para ofrecer una solución integral de gestión de turnos y comunicación con pacientes. Aquí está un resumen detallado de sus características y funcionalidades principales > - Gestión de Pacientes: Los usuarios pueden agregar pacientes a la base de datos con sus datos personales, lo que facilita el seguimiento y la organización de la información. - Agenda de Turnos:Permite agendar turnos de manera manual o con renovación automática cada 15 o 7 días, según las preferencias del usuario. La disponibilidad de horarios se muestra dinámicamente, teniendo en cuenta los turnos ya asignados y la disponibilidad de los profesionales. - Visualización de Turnos: Los usuarios pueden acceder a una sección donde se muestra un calendario con todos los turnos asignados por día, facilitando la visualización y gestión de la agenda. - Envío de Mensajes: Ofrece la posibilidad de enviar mensajes predeterminados para difusión de aumento de precios o recordatorio de pago, así como mensajes personalizados con el nombre del paciente. Los mensajes se envían de manera automática mediante la librería node-Cron, lo que elimina la necesidad de recordatorios manuales. La sesión de WhatsApp se registra para enviar mensajes 24 horas antes del turno a cada paciente que cumpla con la condición establecida. - Cancelación de Turnos: Los usuarios tienen la capacidad de cancelar los turnos asignados, lo que permite una gestión eficiente de la agenda y la disponibilidad de horarios. - Modificación de Datos del Paciente: Se ofrece la opción de modificar los datos de los pacientes almacenados en la base de datos, lo que garantiza la actualización de la información cuando sea necesario. - Automatización y Personalización: La aplicación automatiza el proceso de gestión de turnos y comunicación con pacientes, permitiendo que los profesionales se desliguen de los avisos manuales y los recordatorios de turnos o aumentos de precios",
 	},
 	{
 		projectName: "Viva Futbol",
@@ -120,14 +144,6 @@ const projectsInfo = [
 		detalles:
 			"Proyecto para administrar citas y realizar seguimiento para un establecimiento Veterinaria. Se Utilizó React, Vite, TailwindCss y hooks brindados por la libreria React. La aplicación permite cargar una cita detallando nombre de mascota, propietario, fecha y sintomas. Al agregarlo queda almacenado en memoria, teniendo el respaldo de almacenamiento en localStorage para no perder los datos al actualizar. Las citas pueden modificarse o eliminarse. Posee validacion de campos de formulario. No se utilizó redux por la sencillez del proyecto.",
 	},
-	/* 	
-	{
-		src: crmRedux,
-		alt: "Proyecto 4",
-		desc: "Listado Productos",
-		href: "https://github.com/emanuelheredia/CRUD---React-Redux-REST-API-Axios",
-	},
-*/
 ];
 
 export default projectsInfo;
